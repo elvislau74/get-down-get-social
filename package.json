@@ -22,7 +22,9 @@
   "homepage": "https://github.com/elvislau74/get-down-get-social#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^7.4.1",
+    "mongoose": "^7.4.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }
