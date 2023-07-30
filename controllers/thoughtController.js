@@ -1,6 +1,10 @@
+// Call all necessary models
 const { Thought, User } = require('../models');
 
+// export all thought controllers to be routed/pathed
 module.exports = {
+    // Get all thoughts (GET)
+    // api/thoughts
     async getThoughts(req, res) {
         try {
             const thoughts = await Thought.find();
@@ -11,6 +15,8 @@ module.exports = {
         }
     },
 
+    // Get single thought by Id (GET)
+    // api/thoughts/:thoughtId
     async getSingleThought(req, res) {
         try {
             const thought = await Thought.findOne({_id: req.params.thoughtId})
@@ -26,6 +32,8 @@ module.exports = {
         }
     },
 
+    // Create a new user (POST)
+    // api/thoughts
     async createThought(req,res) {
         try {
             const thought = await Thought.create(req.body);
@@ -47,6 +55,8 @@ module.exports = {
         }
     },
 
+    // Update a user (PUT)
+    // api/thoughts/:thoughtId
     async updateThought(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
@@ -66,6 +76,8 @@ module.exports = {
         }
     },
 
+    // Delete a user (DELETE)
+    // api/thoughts/:thoughtId
     async deleteThought(req, res) {
         try {
             const thought = await Thought.findOneAndRemove({_id: req.params.thoughtId});
@@ -92,6 +104,8 @@ module.exports = {
         }
     },
 
+    // Add a reaction to thought (POST)
+    // api/thoughts/:thoughtId/reactions
     async addReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
@@ -111,6 +125,8 @@ module.exports = {
         }
     },
 
+    // Remove a reaction from a thought (POST)
+    // api/thoughts/:thoughtId/reactions/reactionId
     async removeReaction(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
