@@ -1,3 +1,4 @@
+// Create data for User model
 const users = [
     {username: 'Bill', email: 'bnye@test.com'},
     {username: 'James', email: 'jbond@test.com'},
@@ -6,6 +7,7 @@ const users = [
     {username: 'Michael', email: 'mjackson@test.com'},
 ];
 
+// Create data for Thought model
 const thoughts = [
     {thoughtText: `I can't help falling in love with you.`, username: 'Elvis'},
     {thoughtText: 'Watch my T.V. show, Cosmos: A Spacetime Oddyssey', username: 'Neil'},
@@ -14,4 +16,5 @@ const thoughts = [
     {thoughtText: `The name's Bond. James Bond.`, username: 'James'}
 ];
 
+// Export data for users and thoughts
 module.exports = { thoughts, users };
