@@ -1,6 +1,8 @@
+// call required dependencies and model
 const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction');
 
+// Schema to create Thought model
 const thoughtSchema = new Schema(
     {
         thoughtText: {
@@ -18,9 +20,11 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
+        // returns an array of reactions utilizing the Reaction model
         reactions: [Reaction],
     },
     {
+        // allow virtuals and getters to be included
         toJSON: {
             getters: true,
             virtuals: true,
@@ -29,10 +33,12 @@ const thoughtSchema = new Schema(
     }
 );
 
+// This virtual property 'reactionCount' gets the amount of reactions per thought
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
 
+// function to format the createdAt date
 function formatDate(createdAt) {
     return createdAt.toLocaleDateString("en-US", {
       day: "2-digit",
@@ -43,6 +49,8 @@ function formatDate(createdAt) {
     });
 };
 
-  const Thought = model('thought', thoughtSchema);
+// Initialize the Thought model
+const Thought = model('thought', thoughtSchema);
 
-  module.exports = Thought;
+// Export the Thought model
+module.exports = Thought;

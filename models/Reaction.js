@@ -1,5 +1,7 @@
+// call required dependencies with mongoose (Schema and Types classes)
 const { Schema, Types } = require('mongoose');
 
+// Schema to create Reaction model
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -22,6 +24,7 @@ const reactionSchema = new Schema(
         }
     },
     {
+        // allow virtuals to be included
         toJSON: {
             getters: true,
         },
@@ -29,6 +32,7 @@ const reactionSchema = new Schema(
     },
 );
 
+// function to format the createdAt date
 function formatDate(createdAt) {
     return createdAt.toLocaleDateString("en-US", {
         day: "2-digit",
@@ -39,4 +43,5 @@ function formatDate(createdAt) {
     });
 };
 
+// export the Reaction Schema
 module.exports = reactionSchema;
