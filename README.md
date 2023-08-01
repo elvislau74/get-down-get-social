@@ -41,7 +41,7 @@
 
   After downloading all the required dependencies, type in these following commands into the terminal: `npm run seed` to seed the database, and `npm run start` to start the server. You are now ready to test all of the routes in Insomnia Core, as displayed by the video below:
 
-  If the video above does not work, click [here]().
+  If the video above does not work, click [here](https://drive.google.com/file/d/1va0wEsvGMD2YCABHnHHwzRpvvDepaLsS/view?usp=sharing).
 
 
   ## Contributing
