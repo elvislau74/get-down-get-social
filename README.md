@@ -41,6 +41,10 @@
 
   After downloading all the required dependencies, type in these following commands into the terminal: `npm run seed` to seed the database, and `npm run start` to start the server. You are now ready to test all of the routes in Insomnia Core, as displayed by the video below:
 
+
+https://github.com/elvislau74/get-down-get-social/assets/126195092/0656b55f-497d-4a0a-bb12-f705bc1121e6
+
+
   If the video above does not work, click [here](https://drive.google.com/file/d/1va0wEsvGMD2YCABHnHHwzRpvvDepaLsS/view?usp=sharing).
 
 
