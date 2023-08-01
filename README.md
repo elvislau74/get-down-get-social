@@ -3,8 +3,9 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
 
-  ...
+  In this project, we had to build the back-end of a social media application where users can create thoughts, add reactions to other people's thoughts and add other users as friends. Instead of using MySQL and Sequelize, we were introduced to NoSQL and MongoDB as alternative tools for creating and managing data. 
 
+  As there is no front-end for this project, all the routes will be tested with Insomnia Core
 
   ## Table of Contents
 
@@ -25,12 +26,22 @@
 
   ## Installation
 
-  ...
+  This application requires the user to have Node.js downloaded onto their system. It is recommended that the user downloads v16 up to v18 for this application to run properly. You can download it from [here](https://nodejs.org/en/blog/release/v16.16.0).
+
+  Insomnia is required to test all the routes in this application, since there is no front-end to view them in. You can download it [here](https://insomnia.rest/download).
+
+  MongoDB is also required for this app to run properly. Follow this step-by-step [guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to make sure everything is downloaded smoothly.
+
+  After opening up this app, make sure to type these into the integrated terminal and install these required npm packages/dependencies: 
+  - `npm i express` is required to build the server.
+  - `npm i mongoose` connects users to MongoDB through Node.
 
 
   ## Usage
 
-  ...
+  After downloading all the required dependencies, type in these following commands into the terminal: `npm run seed` to seed the database, and `npm run start` to start the server. You are now ready to test all of the routes in Insomnia Core, as displayed by the video below:
+
+  If the video above does not work, click [here]().
 
 
   ## Contributing
